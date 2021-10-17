@@ -1,0 +1,35 @@
+body
+{
+	margin: 0px;
+}
+.logo
+{
+	height: auto;
+	width: 5%;
+}
+.banner
+{
+	background-color: #982649;
+	height: 10%;
+	width: 100%;
+}
+.left-bar
+{
+	background-color: #71a2b6;
+	height: 100%;
+	width: 15%;
+	float: left;
+}
+.middle
+{	
+	background-color: #D0D3D2;
+	height: 100%;
+	width: 85%;
+	float: left;
+}
+.filterDiv
+{
+	height: 10%;
+	width: 40%;
+	float: left;
+}
