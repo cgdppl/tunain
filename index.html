@@ -5,40 +5,94 @@
 	<title>TunaIn</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 	<link rel="stylesheet" href="style.css" type="text/css"/>
+	<script>
+	filterSelection("all")
+	function filterSelection(c) {
+	  var x, i;
+	  x = document.getElementsByClassName("filterDiv");
+	  if (c == "all") c = "";
+	  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+	  for (i = 0; i < x.length; i++) {
+		RemoveClass(x[i], "show");
+		if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+	  }
+	}
+
+	// Shows filtered elements
+	function AddClass(element, name) {
+	  var i, arr1, arr2;
+	  arr1 = element.className.split(" ");
+	  arr2 = name.split(" ");
+	  for (i = 0; i < arr2.length; i++) {
+		if (arr1.indexOf(arr2[i]) == -1) {
+		  element.className += " " + arr2[i];
+		}
+	  }
+	}
+
+	// Hide elements that are not selected
+	function RemoveClass(element, name) {
+	  var i, arr1, arr2;
+	  arr1 = element.className.split(" ");
+	  arr2 = name.split(" ");
+	  for (i = 0; i < arr2.length; i++) {
+		while (arr1.indexOf(arr2[i]) > -1) {
+		  arr1.splice(arr1.indexOf(arr2[i]), 1);
+		}
+	  }
+	  element.className = arr1.join(" ");
+	}
+
+	// Add active class to the current control button (highlight it)
+	var btnContainer = document.getElementById("myBtnContainer");
+	var btns = btnContainer.getElementsByClassName("btn");
+	for (var i = 0; i < btns.length; i++) {
+	  btns[i].addEventListener("click", function() {
+		var current = document.getElementsByClassName("active");
+		current[0].className = current[0].className.replace(" active", "");
+		this.className += " active";
+	  });
+	}
+
+	</script>
 </head>
 <body>
+	<!--The top part of the site-->
 	<section class="banner">
 	<a href="index.html"><img src="img/logotuna.png" class="logo"></a>
 	</section>
+	<!--The left bar of the site--> 
 	<section class="left-bar">
+	<!--Filter feature-->
 	<h2>Filter</h2>
 	<div id="myBtnContainer">
-    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-    <button class="btn" onclick="filterSelection('alternative')"> Alternative</button>
-    <button class="btn" onclick="filterSelection('bedroom-pop')"> Bedroom pop</button>
-    <button class="btn" onclick="filterSelection('dwontempo')"> Dwontempo</button>
-    <button class="btn" onclick="filterSelection('emo')"> Emo</button>
-	<button class="btn" onclick="filterSelection('hip-hop')"> Hip hop</button>
-	<button class="btn" onclick="filterSelection('pop')"> Pop</button>
-	<button class="btn" onclick="filterSelection('rock')"> Rock</button>
+    <button class="btn active start" onclick="filterSelection('all')"> Show all</button><br>
+    <button class="btn" onclick="filterSelection('alternative')"> Alternative</button><br>
+    <button class="btn" onclick="filterSelection('bedroom-pop')"> Bedroom pop</button><br>
+    <button class="btn" onclick="filterSelection('dwontempo')"> Dwontempo</button><br>
+    <button class="btn" onclick="filterSelection('emo')"> Emo</button><br>
+	<button class="btn" onclick="filterSelection('hip-hop')"> Hip hop</button><br>
+	<button class="btn" onclick="filterSelection('pop')"> Pop</button><br>
+	<button class="btn" onclick="filterSelection('rock')"> Rock</button><br>
 	</div>
 	</section>
+	<!--All of the bands on the site-->
 	<section class="middle">
 	<div class="filterDiv alternative">
 	<h2>Band name</h2>
-	Genre: genre place
+	Genre: alternative
 	</div>
 	<div class="filterDiv alternative">
 	<h2>Band name</h2>
-	Genre: genre place
+	Genre: alternative
 	</div>
 	<div class="filterDiv alternative">
 	<h2>Band name</h2>
-	Genre: genre place
+	Genre: alternative
 	</div>
 	<div class="filterDiv bedroom-pop">
 	<h2>Band name</h2>
-	Genre: genre place
+	Genre: bedroom pop
 	</div>
 	</section>
 </body>
