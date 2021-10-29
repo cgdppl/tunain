@@ -6,47 +6,76 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 	<link rel="stylesheet" href="style.css" type="text/css"/>
 	<script>
+	var links = [
+			"https://cgdppl.github.io/tunain/BandSite1.html",
+			"https://cgdppl.github.io/tunain/BandSite2.html",
+			"https://cgdppl.github.io/tunain/BandSite3.html",
+			"https://cgdppl.github.io/tunain/BandSite4.html",
+			"https://cgdppl.github.io/tunain/BandSite5.html",
+			"https://cgdppl.github.io/tunain/BandSite6.html",
+			"https://cgdppl.github.io/tunain/BandSite7.html",
+			"https://cgdppl.github.io/tunain/BandSite8.html",
+			"https://cgdppl.github.io/tunain/BandSite9.html",
+			"https://cgdppl.github.io/tunain/BandSite10.html",
+			"https://cgdppl.github.io/tunain/BandSite11.html",
+			"https://cgdppl.github.io/tunain/BandSite12.html",
+			"https://cgdppl.github.io/tunain/BandSite13.html",
+			"https://cgdppl.github.io/tunain/BandSite14.html",
+			"https://cgdppl.github.io/tunain/BandSite15.html",
+			"https://cgdppl.github.io/tunain/BandSite16.html",
+			"https://cgdppl.github.io/tunain/BandSite17.html",
+			"https://cgdppl.github.io/tunain/BandSite18.html",
+			"https://cgdppl.github.io/tunain/BandSite19.html",
+			"https://cgdppl.github.io/tunain/BandSite20.html",
+			"https://cgdppl.github.io/tunain/BandSite21.html",
+
+		];
+
+		function randomSite() {
+			var i = parseInt(Math.random() * links.length);
+			location.href = links[i];
+		}
 	function filterSelection(c) {
-	  var x, i;
-	  x = document.getElementsByClassName("filterDiv");
-	  if (c == "all") c = "";
-	  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-	  for (i = 0; i < x.length; i++) {
+		var x, i;
+		x = document.getElementsByClassName("filterDiv");
+		if (c == "all") c = "";
+		// Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+		for (i = 0; i < x.length; i++) {
 		RemoveClass(x[i], "show");
 		if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
-	  }
+		}
 	}
 
 	// Shows filtered elements
 	function AddClass(element, name) {
-	  var i, arr1, arr2;
-	  arr1 = element.className.split(" ");
-	  arr2 = name.split(" ");
-	  for (i = 0; i < arr2.length; i++) {
-		if (arr1.indexOf(arr2[i]) == -1) {
-		  element.className += " " + arr2[i];
+		var i, arr1, arr2;
+		arr1 = element.className.split(" ");
+		arr2 = name.split(" ");
+		for (i = 0; i < arr2.length; i++) {
+			if (arr1.indexOf(arr2[i]) == -1) {
+			element.className += " " + arr2[i];
 		}
-	  }
+	    }
 	}
 
 	// Hide elements that are not selected
 	function RemoveClass(element, name) {
-	  var i, arr1, arr2;
-	  arr1 = element.className.split(" ");
-	  arr2 = name.split(" ");
-	  for (i = 0; i < arr2.length; i++) {
+		var i, arr1, arr2;
+		arr1 = element.className.split(" ");
+		arr2 = name.split(" ");
+		for (i = 0; i < arr2.length; i++) {
 		while (arr1.indexOf(arr2[i]) > -1) {
-		  arr1.splice(arr1.indexOf(arr2[i]), 1);
+			arr1.splice(arr1.indexOf(arr2[i]), 1);
 		}
-	  }
-	  element.className = arr1.join(" ");
+	    }
+		element.className = arr1.join(" ");
 	}
 
 	// Add active class to the current control button (highlight it)
 	var btnContainer = document.getElementById("myBtnContainer");
 	var btns = btnContainer.getElementsByClassName("btn");
 	for (var i = 0; i < btns.length; i++) {
-	  btns[i].addEventListener("click", function() {
+		btns[i].addEventListener("click", function() {
 		var current = document.getElementsByClassName("active");
 		current[0].className = current[0].className.replace(" active", "");
 		this.className += " active";
@@ -72,7 +101,9 @@
     <button class="btn" onclick="filterSelection('emo')"> Emo</button><br>
 	<button class="btn" onclick="filterSelection('hip-hop')"> Hip hop</button><br>
 	<button class="btn" onclick="filterSelection('pop')"> Pop</button><br>
-	<button class="btn" onclick="filterSelection('rock')"> Rock</button><br>
+	<button class="btn" onclick="filterSelection('rock')"> Rock</button><br><hr>
+	<button class="btn" href="#" onclick="randomSite();">Random band</button><hr>
+	<a href="https://twitter.com/TunaIn_Project">Follow us on Twitter</a>
 	</div>
 	</section>
 	<!--All of the bands on the site-->
