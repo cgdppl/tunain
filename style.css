@@ -1,28 +1,26 @@
-body
-{
+html {
+	font-family: arial;
+}
+body {
 	margin: 0%;
 	background-color: #D0D3D2;
 }
-.logo
-{
+.logo {
 	height: auto;
 	width: 5%;
 }
-.banner
-{
+.banner {
 	background-color: #982649;
 	height: 10%;
 	width: 100%;
 }
-.left-bar
-{
+.left-bar {
 	background-color: #71a2b6;
 	height: 100%;
 	width: 15%;
 	float: left;
 }
-.middle
-{	
+.middle {	
 	background-color: #D0D3D2;
 	height: 100%;
 	width: 85%;
@@ -35,11 +33,14 @@ body
 .filterDiv {
 	float: left;
 	height: 20%;
-	width: 50%;
+	width: 30%;
+	padding: 10%;
 	background-color: #2196F3;
 	display: none;
 }
-
+.filterDiv:hover {
+	background-color: grey;
+}
 .show {
 	display: block;
 }
@@ -65,4 +66,7 @@ body
 	height: 20%;
 	width: 50%;
 	background-color: #2196F3;
+}
+a:link, a:visted, a:hover, a:active {
+	text-decoration: none;
 }
