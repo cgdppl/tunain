@@ -98,8 +98,11 @@ a:link, a:visited, a:hover, a:active {
 		flex-direction: column;
 	}
 	.col-1,
-	.filterDiv,
 	.allBtns{
 		width: 100vw;
+	}
+	.filterDiv{
+		width: 100vw;
+		height: 20vw;
 	}
 }
