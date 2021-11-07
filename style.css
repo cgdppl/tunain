@@ -97,12 +97,22 @@ a:link, a:visited, a:hover, a:active {
 	.columns {
 		flex-direction: column;
 	}
-	.col-1,
-	.allBtns{
+	.col-1{
 		width: 100vw;
+	}
+	.left-bar {
+		width: 100vw;
+		justify-content: center;
+	}
+	.logo{
+		width: 10vw;
+		height: auto;
 	}
 	.filterDiv{
 		width: 100vw;
 		height: 20vw;
+	}
+	.filterDiv:hover {
+		font-size: 1.1rem;
 	}
 }
