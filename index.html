@@ -4,7 +4,8 @@
 	<meta charset= "utf-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title>TunaIn</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-	<link rel="stylesheet" href="style.css" type="text/css"/>
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="icon" href="img/icon.png"/>
 	<script>
 	// Function which chooses a random site
 	var links = [
@@ -85,37 +86,24 @@
 </head>
 <body>
 	<div class="grid">
-		<div class="columns col-1">
-			<!--The top part of the site-->
-				<div class="banner">
-					<a href="index.html"><img src="img/logotuna.png" class="logo"></a>
-				</div>
-		</div>
-		<!--The left bar of the site-->
-		<div class="columns">
-			<div class="left-bar">
-				<div class="allBtns">
-					<h2>Filter</h2>
-				</div>
-				<!--Filter feature-->
-				<div id="myBtnContainer" class="allBtns">
-					<button class="btn active" onclick="filterSelection('all')"> Show all</button><br>
-					<button class="btn" onclick="filterSelection('alternative')"> Alternative</button><br>
-					<button class="btn" onclick="filterSelection('bedroom')"> Bedroom pop</button><br>
-					<button class="btn" onclick="filterSelection('downtempo')"> Downtempo</button><br>
-					<button class="btn" onclick="filterSelection('emo')"> Emo</button><br>
-					<button class="btn" onclick="filterSelection('hip-hop')"> Hip hop</button><br>
-					<button class="btn" onclick="filterSelection('pop')"> Pop</button><br>
-					<button class="btn" onclick="filterSelection('rock')"> Rock</button><br><hr>
-				</div>
-				<div class="allBtns">
-					<!--Randomizer button-->
-					<button class="btn2" href="#" onclick="randomSite();">Random band</button><hr>
-					<!--Twitter link-->
-					<a href="https://twitter.com/TunaIn_Project">Follow us on Twitter</a>
-				</div>
+		<!--The top part of the site-->
+		<header>
+			<div class="columns">
+				<div class="col-1">
+						<div class="banner">
+							<a href="index.html"><img src="img/logotuna.png" class="logo"></a>
+						</div>
+						<nav>
+							<ul>
+								<li class="nav-li"><a class="current-page" href="index.html">Home</a></li>
+								<li class="nav-li"><button class="top-menu-button">Filter</button></li>
+								<li class="nav-li"><button class="top-menu-button" onclick="randomSite()">Random band</button></li>
+								<li class="nav-li"><a class="" href="#">About us</a></li>
+							</ul>
+						</nav>
+					</div>
 			</div>
-		</div>
+		</header>
 		<!--All of the bands on the site-->
 		<div class="container columns">
 			<div class="middle">
