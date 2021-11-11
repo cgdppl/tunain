@@ -1,3 +1,4 @@
+/*General stuff*/
 html {
 	font-family: arial;
 }
@@ -5,21 +6,26 @@ body {
 	margin: 0%;
 	background-color: #D0D3D2;
 }
+/*link properties*/
+a {
+	text-decoration: none;
+	color: #505454;
+}
+/*Grid stuff*/
 .grid {
 	display: grid;
-	grid-template-columns: 15% 85%;
 	align-items: flex-start;
 }
 .columns {
 	display: flex;
 	margin: 0;
 }
+/*Top of the site css*/
 .col-1 {
-	grid-column: 1 / span 2;
+	width: 100vw;
 }
 .banner {
 	background-color: #982649;
-	width: 100vw;
 	display: flex;
 	justify-content: center;
 }
@@ -27,28 +33,68 @@ body {
 	height: auto;
 	width: 6.75vw;
 }
-.left-bar {
-	background-color: #71a2b6;
-	width: 15vw;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-	justify-content: left;
+/*Nav*/
+header {
+	width: 100vw;
+	text-align: center;
+	background-color: #982649;
 }
-.allBtns {
+nav ul{
+	width: 100vw;
+	list-style: none;
+	padding: 0;
+	display: flex;
+	justify-content: center;
 }
+nav li {
+	margin: 0 1rem;
+}
+nav a {
+	text-decoration: none;
+	color: black;
+	font-weight: 600;
+	padding: 0.25rem 0;
+}
+nav a:hover {
+	color: white;
+}
+nav a:focus {
+	color: white;
+}
+/*Current page underline and hover*/
+.current-page {
+	border-bottom: 3px solid black;
+}
+.current-page:hover {
+	color: black;
+}
+/*Buttons on top menu*/
+.top-menu-button {
+	border: none;
+	margin: 0;
+	padding: 0;
+	background-color: #982649;
+	font-weight: 600;
+	font-size: 1rem;
+}
+.top-menu-button:hover{
+	cursor: pointer;
+	color: white;
+}
+/*Middle containers for filter divs*/
 .middle {
-	width: 85vw;
 	justify-content: left;
 }
 .container {
 	overflow: hidden;
 }
+/*Filter div stuff*/
 .filterDiv {
 	display: none;
 	float: left;
 	background-color: #74AED2;
 	height: 10vw;
-	width: 42vw;
+	width: 33vw;
 	text-align: center;
 	line-height: 2rem;
 }
@@ -56,6 +102,7 @@ body {
 	background-color: grey;
 	font-size: 1.2rem;
 }
+/*Filter stuff*/
 .show {
 	display: block;
 }
@@ -93,20 +140,17 @@ body {
 a:link, a:visited, a:hover, a:active {
 	text-decoration: none;
 }
+/*Media querys*/
 @media (max-width: 600px){
 	.columns {
 		flex-direction: column;
 	}
-	.col-1{
-		width: 100vw;
-	}
-	.left-bar {
-		width: 100vw;
-		justify-content: center;
-	}
 	.logo {
 		width: 10vw;
 		height: auto;
+	}
+	.col-1{
+		width: 100vw;
 	}
 	.filterDiv {
 		width: 100vw;
