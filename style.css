@@ -39,27 +39,48 @@ header {
 	text-align: center;
 	background-color: #982649;
 }
-nav ul{
+nav ul {
 	width: 100vw;
 	list-style: none;
 	padding: 0;
 	display: flex;
 	justify-content: center;
 }
+
 nav li {
 	margin: 0 1rem;
 }
+
 nav a {
 	text-decoration: none;
 	color: black;
 	font-weight: 600;
 	padding: 0.25rem 0;
 }
+
 nav a:hover {
 	color: white;
 }
+
 nav a:focus {
 	color: white;
+}
+/*Dropdown*/
+.dropdown {
+	position: relative;
+	display: inline-block;
+	width: 5rem;
+}
+.drp-content {
+	display: none;
+	position: absolute;
+	z-index: 9;
+}
+.dropdown:hover .drp-content {
+	display: block;
+}
+.drp-btn {
+	display: block;
 }
 /*Current page underline and hover*/
 .current-page {
