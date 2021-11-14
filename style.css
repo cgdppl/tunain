@@ -188,4 +188,7 @@ a:link, a:visited, a:hover, a:active {
 		width: 10rem;
 		font-size: 1.2rem;
 	}
+	.bandSite{
+		height: 100vw;
+	}
 }
