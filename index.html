@@ -71,17 +71,6 @@
 	    }
 		element.className = arr1.join(" ");
 	}
-
-	// Add active class to the current control button (highlight it)
-	var btnContainer = document.getElementById("myBtnContainer");
-	var btns = btnContainer.getElementsByClassName("btn");
-	for (var i = 0; i < btns.length; i++) {
-		btns[i].addEventListener("click", function() {
-			var current = document.getElementsByClassName(" active");
-			current[0].className = current[0].className.replace(" active", " ");
-			this.className += " active";
-		});
-	}
 	</script>
 </head>
 <body>
@@ -90,18 +79,32 @@
 		<header>
 			<div class="columns">
 				<div class="col-1">
-						<div class="banner">
-							<a href="index.html"><img src="img/logotuna.png" class="logo"></a>
-						</div>
-						<nav>
-							<ul>
-								<li class="nav-li"><a class="current-page" href="index.html">Home</a></li>
-								<li class="nav-li"><button class="top-menu-button">Filter</button></li>
-								<li class="nav-li"><button class="top-menu-button" onclick="randomSite()">Random band</button></li>
-								<li class="nav-li"><a class="" href="#">About us</a></li>
-							</ul>
-						</nav>
+					<div class="banner">
+						<a href="index.html"><img src="img/logotuna.png" class="logo"></a>
 					</div>
+					<nav>
+						<ul>
+							<li class="nav-li"><a class="current-page" href="index.html">Home</a></li>
+							<li class="nav-li">
+								<div class="dropdown">
+									<button class="top-menu-button">Filter</button>
+									<div class="drp-content">
+										<button class="drp-btn" onclick="filterSelection('all')">All</button>
+										<button class="drp-btn" onclick="filterSelection('alternative')">Alternative</button>
+										<button class="drp-btn" onclick="filterSelection('bedroom')">Bedroom pop</button>
+										<button class="drp-btn" onclick="filterSelection('downtempo')">Downtempo</button>
+										<button class="drp-btn" onclick="filterSelection('emo')">Emo</button>
+										<button class="drp-btn" onclick="filterSelection('hip-hop')">Hip-hop</button>
+										<button class="drp-btn" onclick="filterSelection('pop')">Pop</button>
+										<button class="drp-btn" onclick="filterSelection('rock')">Rock</button>
+									</div>
+								</div>
+							</li>
+							<li class="nav-li"><button class="top-menu-button" onclick="randomSite()">Random band</button></li>
+							<li class="nav-li"><a class="" href="https://twitter.com/TunaIn_Project">Follow us on Twitter</a></li>
+						</ul>
+					</nav>
+				</div>
 			</div>
 		</header>
 		<!--All of the bands on the site-->
