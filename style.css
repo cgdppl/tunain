@@ -81,6 +81,10 @@ nav a:focus {
 }
 .drp-btn {
 	display: block;
+	border: none;
+	background-color: #982649;
+	width: 5rem;
+	font-size: 0.8rem;
 }
 /*Current page underline and hover*/
 .current-page {
