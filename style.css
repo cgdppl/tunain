@@ -152,9 +152,9 @@ nav a:focus {
 	background-color: #666;
 	color: white;
 }
+/*Band page*/
 .bandSite{
 	float: left;
-	height: auto;
 	width: 70vw;
 	padding-left: 10vw;
 	padding-right: 20vw;
@@ -189,6 +189,7 @@ a:link, a:visited, a:hover, a:active {
 		font-size: 1.2rem;
 	}
 	.bandSite{
+		width: 100vw;
 		height: 100vw;
 	}
 }
