@@ -190,7 +190,7 @@ a:link, a:visited, a:hover, a:active {
 	}
 	.bandSite {
 		width: 100vw;
-		height: 80vh;
+		height: 100vh;
 		font-size: 1.2rem;
 		background: orange;
 	}
