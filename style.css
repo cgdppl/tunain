@@ -166,12 +166,12 @@ a:link, a:visited, a:hover, a:active {
 	text-decoration: none;
 }
 /*Media querys*/
-@media (max-width: 700px){
+@media (max-width: 600px){
 	.columns {
 		flex-direction: column;
 	}
 	.logo {
-		width: 10vw;
+		width: 15vw;
 		height: auto;
 	}
 	.col-1{
