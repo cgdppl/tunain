@@ -166,7 +166,7 @@ a:link, a:visited, a:hover, a:active {
 	text-decoration: none;
 }
 /*Media querys*/
-@media (max-width: 500px){
+@media (max-width: 600px){
 	.columns {
 		flex-direction: column;
 	}
