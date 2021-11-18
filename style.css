@@ -155,11 +155,9 @@ nav a:focus {
 /*Band page*/
 .bandSite {
 	float: left;
-	width: 70vw;
-	padding-left: 10vw;
-	padding-right: 20vw;
-	padding-top: 10vw;
-	padding-bottom: 20vw;
+	width: 100vw;
+	height: 100vh;
+	text-align: center;
 	background-color: #74AED2;
 }
 a:link, a:visited, a:hover, a:active {
